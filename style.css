@@ -1,0 +1,241 @@
+/* Set default font and color for body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  }
+  
+  /* Title style */
+  #title {
+  font-family: Georgia, serif;
+  }
+  
+  /* Style for error messages */
+  .error {
+  font-family: Verdana, sans-serif;
+  }
+  
+  /* Smooth scrolling for HTML */
+  html {
+  scroll-behavior: smooth;
+  }
+  
+  /* Navigation bar style */
+  nav {
+  background-color: #212121;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  }
+  
+  /* Style for list items in navigation bar */
+  nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  /* Style for individual list items in navigation bar */
+  nav li {
+  margin: 0 1rem;
+  }
+  
+  /* Style for links within navigation bar */
+  nav li a {
+  display: block;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  }
+  
+  /* Style for links on hover within navigation bar */
+  nav li a:hover {
+  background-color: #fff;
+  color: #212121;
+  }
+  
+  /* Heading level 2 style */
+  h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  padding: 2rem 0;
+  margin: 0;
+  }
+  
+  /* Table style */
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  }
+  
+  /* Card style */
+  .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin-bottom: 16px;
+  }
+  
+  /* Heading level 2 within card style */
+  .card h2 {
+  font-size: 24px;
+  margin-top: 0;
+  }
+  
+  /* Style for table header and data cells */
+  th,
+  td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 100px; /* or adjust to your desired width*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
+  
+  /* Style for table header cells */
+  th {
+  background-color: #f2f2f2;
+  }
+  
+  /* Registration form card style */
+  .regCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  width: 96.5%;
+  max-width: 1368px; /* adjust this value as needed */
+  }
+  
+  /* Heading level 2 within registration form card style */
+  .regCard h2 {
+  margin-top: 0;
+  font-family: Georgia, serif;
+  }
+  
+  /* Style for labels in registration form */
+  .regCard label {
+  display: block;
+  margin-bottom: 5px;
+  }
+  
+  /* Style for various input types in registration form */
+  .regCard input[type='text'],
+  .regCard input[type='email'],
+  .regCard input[type='password'],
+  .regCard input[type='number'],
+  .regCard input[type='date'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+  }
+  
+  /* Submit button style */
+  .regCard input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  }
+  
+  /* Submit button hover style */
+  .regCard input[type='submit']:hover {
+  background-color: #45a049;
+  }
+  
+  /* Style for error messages in registration form */
+  .regCard .error {
+  color: red;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  display: block;
+  }
+  
+  /* Icon wrapper style for registration form */
+  .regCard .icon-wrapper {
+  position: relative;
+  }
+
+/* Styles for the icon on the top right corner of the card */
+.regCard .icon {
+  position: absolute; /* position the icon element in an absolute manner */
+  top: 50%; /* position the icon element vertically in the middle of the card */
+  transform: translateY(-50%); /* adjust the vertical alignment of the icon element */
+  right: 10px; /* position the icon element on the top right corner of the card */
+  cursor: pointer; /* set the cursor type when hovering over the icon element */
+}
+
+/* Hide the icon if it has the "hidden" class */
+.regCard .icon.hidden {
+  display: none;
+}
+
+/* Show the icon when its parent element has focus */
+.regCard .icon-wrapper:focus-within .icon {
+  display: block;
+}
+
+/* Hide the icon when its parent element has focus and the icon has the "hidden" class */
+.regCard .icon-wrapper:focus-within .icon.hidden {
+  display: none;
+}
+
+/* Styles for mobile devices with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+  /* Change the direction of the navigation list from horizontal to vertical */
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* Add margin to each navigation item */
+  nav li {
+    margin: 1rem 0;
+  }
+
+  /* Adjust the padding of table cells */
+  .card table td,
+  .card table th {
+    padding: 4px;
+  }
+
+  /* Set the width of the icon wrapper to full width */
+  .icon-wrapper {
+    width: 100%;
+  }
+}
+
+/* More styles for mobile devices with a maximum width of 600px */
+@media only screen and (max-width: 600px) {
+  /* Display table cells as block elements */
+  th, td {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Add labels to each table cell */
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}

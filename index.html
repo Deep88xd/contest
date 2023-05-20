@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <!-- left-aligned link -->
+      <li><a href="#">Library system</a></li>
+      
+      <!-- right-aligned links -->
+      <div class="right-links">
+        <li style="display:inline-block"><a href="#books">Books</a></li>
+        <li style="display:inline-block"><a href="#register">Register</a></li>
+        <li style="display:inline-block"><a href="#">contactUs</a></li>
+        <li style="display:inline-block"><a href="#">Logout</a></li>
+      </div>
+    </ul>
+  </nav>
+
+	<!-- Card section for displaying books -->
+	<div class="card" id="books">
+    <h1>Books</h1>
+	
+    <table>
+		 <!-- Table header row -->
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Availability</th>
+        </tr>
+
+		 <!-- Book data rows -->
+        <tr>
+          <td>1</td>
+          <td>The Martian
+            <table>
+              <tr>
+                <td>Publication Date:</td>
+                <td>2011</td>
+              </tr>
+              <tr>
+                <td>Page Count:</td>
+                <td>369</td>
+              </tr>
+              <tr>
+                <td>ISBN:</td>
+                <td>978-0804139021</td>
+              </tr>
+            </table>
+          </td>
+          <td>Andy Weir</td>
+          <td>Science Fiction</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>The Alchemist
+            <table>
+              <tr>
+                <td>Publication Date:</td>
+                <td>1988</td>
+              </tr>
+              <tr>
+                <td>Page Count:</td>
+                <td>208</td>
+              </tr>
+              <tr>
+                <td>ISBN:</td>
+                <td>978-0061122415</td>
+              </tr>
+            </table>
+          </td>
+          <td>Paulo Coelho</td>
+          <td>Fiction</td>
+          <td>Unavailable</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>The 7 Habits of Highly Effective People
+            <table>
+              <tr>
+                <td>Publication Date:</td>
+                <td>1989</td>
+              </tr>
+              <tr>
+                <td>Page Count:</td>
+                <td>381</td>
+              </tr>
+              <tr>
+                <td>ISBN:</td>
+                <td>978-0743269513</td>
+              </tr>
+            </table>
+          </td>
+          <td>Stephen Covey</td>
+          <td>Self-help</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>The Little Prince
+            <table>
+              <tr>
+                <td>Publication Date:</td>
+                <td>2008</td>
+              </tr>
+              <tr>
+                <td>Page Count:</td>
+                <td>96</td>
+              </tr>
+              <tr>
+                <td>ISBN:</td>
+                <td>978-0156012195</td>
+              </tr>
+            </table>
+          </td>
+          <td> Antoine de Saint-Exupéry</td>
+          <td>philosophical allegory</td>
+          <td>Available</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>The Lean Startup
+            <table>
+              <tr>
+                <td>Publication Date:</td>
+                <td>2011</td>
+              </tr>
+              <tr>
+                <td>Page Count:</td>
+                <td>336</td>
+              </tr>
+              <tr>
+                <td>ISBN:</td>
+                <td>978-0307887894</td>
+              </tr>
+            </table>
+          </td>
+          <td>Eric Ries</td>
+          <td>Business, Entrepreneurship</td>
+          <td>Available</td>
+        </tr>
+      </table>
+</div>
+
+	<!-- Horizontal rule for separating card sections -->
+	  <hr>
+
+      <!-- Card section for registration form -->
+		<div class="regCard" id="register">
+		<h2>Registration form</h2>
+		<!-- Form for user input -->
+	   <form method="get" action="#" target="_self">
+        <label for="fname">First Name*</label>
+        <input type="text" id="fname" name="firstname" required  autocomplete="off">
+        <label for="lname">Last Name*</label>
+        <input type="text" id="lname" name="lastname" required  autocomplete="off">
+        
+        <!-- Email input field -->
+        <label for="email">Email*</label>
+        <div class="icon-wrapper">
+           <input type="email" id="email" name="email" required  autocomplete="off">
+           <i class="fa fa-envelope icon"></i>
+        </div>
+        <span class="error" id="email_error"></span>
+        
+        <!-- Date of Birth input field -->
+        <label for="dob">Date of Birth*</label>
+        <div class="icon-wrapper">
+           <input type="date" id="dob" name="dob" required  autocomplete="off">
+           <i class="fa fa-calendar icon"></i>
+        </div>
+        
+        <label for="age">Age (between 5 and 100)*</label>
+        <input type="number" id="age" name="age" min="5" max="100" required  autocomplete="off">
+        
+        <!-- Password input field -->
+        <label for="password">Password*</label>
+        <div class="icon-wrapper">
+           <input type="password" id="password" name="password" required  autocomplete="off">
+           <i class="fa fa-lock icon"></i>
+        </div>
+        <span class="error" id="password_error"></span>
+        
+        <!-- Confirm Password input field -->
+        <label for="cpassword">Confirm Password*</label>
+        <div class="icon-wrapper">
+           <input type="password" id="cpassword" name="cpassword" required  autocomplete="off">
+           <i class="fa fa-lock icon"></i>
+        </div>
+        <span class="error" id="cpassword_error"></span>
+        
+        <input type="submit" value="Submit">
+     </form>
+	</div>
+</body>
+</html>
